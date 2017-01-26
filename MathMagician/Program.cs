@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathMagician.Numbers;
 
 namespace MathMagician
 {
@@ -24,7 +25,6 @@ namespace MathMagician
             // If they enter a number > 30, how do I respond AND exit the program?
 
             string how_many = Console.ReadLine();
-
             Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
             Console.WriteLine("Press any key to exit ...");
             Console.ReadKey();
