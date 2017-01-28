@@ -5,24 +5,24 @@ using MathMagician.Numbers;
 namespace MathMagicianTests.Numbers
 {
     [TestClass]
-    public class EvenNumberTests
+    public class OddNumberTest
     {
         [TestMethod]
         public void EnsureICanCreateInstance()
         {
-            EvenNumber evenNumber = new EvenNumber();
+           OddNumber oddNumber = new OddNumber();
 
-            Assert.IsNotNull(evenNumber);
+            Assert.IsNotNull(oddNumber);
         }
 
         [TestMethod]
-        public void TestIfNumberIsEven()
+        public void TestIfNumberIsOdd()
         {
             // Arrange
-            EvenNumber evenNumber = new EvenNumber();
+            OddNumber oddNumber = new OddNumber();
             // Act (Call the method your testing)
-            int expectedResult = 2;
-            int actualResult = evenNumber.GetFirst();
+            int expectedResult = 1;
+            int actualResult = oddNumber.GetFirst();
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -31,10 +31,10 @@ namespace MathMagicianTests.Numbers
         public void TestIfEvenGetNext()
         {
             // Arrange
-            EvenNumber evenNumber = new EvenNumber();
+            OddNumber oddNumber = new OddNumber();
             // Act (Call the method your testing)
-            int expectedResult = 4;
-            int actualResult = evenNumber.GetNext(2);
+            int expectedResult = 3;
+            int actualResult = oddNumber.GetNext(1);
             // Assert (Check the output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
@@ -43,10 +43,10 @@ namespace MathMagicianTests.Numbers
         public void EnsureSequenceIsWorking()
         {
             // Arrange
-            EvenNumber evenNumber = new EvenNumber();
+            OddNumber oddNumber = new OddNumber();
             // Act
-            int[] expectedResult = new int[] { 0, 2, 4, 6, 8 };
-            int[] actualResult = evenNumber.GetSequence(5);
+            int[] expectedResult = new int[] { 1, 3, 5, 7, 9 };
+            int[] actualResult = oddNumber.GetSequence(5);
             // Assert (Check thte output from your method)
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
