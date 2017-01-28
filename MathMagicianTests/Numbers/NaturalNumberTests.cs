@@ -61,6 +61,8 @@ namespace MathMagicianTests.Numbers
             NaturalNumber naturalNumber = new NaturalNumber();
             //Act 
             string expectedResult = "1 2 3 4 5";
+            // Both below are the same
+            //string actualResult = naturalNumber.PrintNumbers(new[] { 1, 2, 3, 4, 5 });
             string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
