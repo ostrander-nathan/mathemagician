@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Numbers\EvenNumber.cs" />
     <Compile Include="Numbers\Integer.cs" />
     <Compile Include="Numbers\NaturalNumber.cs" />
     <Compile Include="Program.cs" />

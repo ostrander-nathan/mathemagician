@@ -17,17 +17,17 @@ namespace MathMagician.Numbers
             // this.First = 1;
         }
         
-        public int GetFirst()
+        public virtual int GetFirst()
         {
             return First;
         }
     
-        public int GetNext(int current)
+        public virtual int GetNext(int current)
         {
             return current + 1;
         }
 
-        public int[] GetSequence(int how_many)
+        public virtual int[] GetSequence(int how_many)
         {
             int[] seqCounter;
             seqCounter = new int[how_many];

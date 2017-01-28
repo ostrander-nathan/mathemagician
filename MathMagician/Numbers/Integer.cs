@@ -10,7 +10,7 @@ namespace MathMagician.Numbers
     {
         int GetFirst(); // get first number
         int GetNext(int current); // get next int in sequence
-        int[] GetSequence(int how_many);
-        string PrintNumbers(int[] how_many);
+        int[] GetSequence(int how_many); // get full sequence
+        string PrintNumbers(int[] how_many); // print array of input
     }
 }

@@ -11,21 +11,48 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What would you like for me to do?");
-            Console.WriteLine(); // How you provide the user useful info is on you
-            // Think about how will the user pick a command?
-            // Is it better to modify the orginal question? Make it more useful?
-
+            // Think about how will the user pick a command? Pick Command from question then pick number
+            Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber, PrimeNumber");
+            // Is it better to modify the orginal question? Make it more useful? modified question
             string command = Console.ReadLine();
-            // Once I have the command(whatever it look like) how should i check if its a valid command
 
             // When should you actually create an instance of your number class? now or later? 
-            Console.WriteLine("How many should I print?");
-            // When do I check if the "How Many" response is to big?
-            // If they enter a number > 30, how do I respond AND exit the program?
+            NaturalNumber userNumber = new NaturalNumber();
+            // Once I have the command(whatever it look like) how should i check if its a valid command
+            switch (command.ToLower())
+            {
+                case "naturalnumber":
+                    userNumber = new NaturalNumber();
+                    break;
 
+                case "evennumber":
+                    userNumber = new EvenNumber();
+                    break;
+
+                default:
+                    Console.WriteLine("Whoops! Wrong Command");
+                    break;
+                    // Need Command to go back to start
+            }
+            Console.WriteLine("How many should I print 1-30?");
             string how_many = Console.ReadLine();
-            Console.WriteLine($"Cool, I'm going to print {how_many} {command} numbers.");
+            // set string input(how_many) to int number
+            int number = Int32.Parse(how_many);
+            // loop over string 
+            if (number <= 30 && number >= 1)
+            {
+                Console.WriteLine($"Cool, I'm going to print {number} {command} numbers.");
+                // set userNumber with method PrintNumbers and parameter calling GetSeq w/number value
+                string entirePrintOut = userNumber.PrintNumbers(userNumber.GetSequence(number));
+                Console.WriteLine(entirePrintOut);
+            }
+            else
+            {
+                // If they enter a number > 30, how do I respond AND exit the program?
+                // When do I check if the "How Many" response is to big?
+                Console.WriteLine($"Enter a number less than 30");
+            };
+
             Console.WriteLine("Press any key to exit ...");
             Console.ReadKey();
         }

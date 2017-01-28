@@ -16,6 +16,7 @@ namespace MathMagicianTests.Numbers
 
             Assert.IsNotNull(naturalNumber);
         }
+
         [TestMethod]
         public void EnsureOneIsTheFirst()
         {
@@ -28,6 +29,7 @@ namespace MathMagicianTests.Numbers
             // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [TestMethod]
         public void EnsureNextNumber()
         {
@@ -36,8 +38,10 @@ namespace MathMagicianTests.Numbers
             // Act 
             int expectedResult = 2 + 1;
             int actualResult = naturalNumber.GetNext(2);
+            // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
+
         [TestMethod]
         public void EnsureSequenceIsWorking()
         {
@@ -46,8 +50,10 @@ namespace MathMagicianTests.Numbers
             // Act
             int[] expectedResult = new int[] {1,2,3,4,5} ;
             int[] actualResult = naturalNumber.GetSequence(5);
+            // Assert (Check thte output from your method)
             CollectionAssert.AreEqual(expectedResult, actualResult);
         }
+
         [TestMethod]
         public void EnsurePrintNumbersIsWorking()
         {
@@ -56,6 +62,7 @@ namespace MathMagicianTests.Numbers
             //Act 
             string expectedResult = "1 2 3 4 5";
             string actualResult = naturalNumber.PrintNumbers(naturalNumber.GetSequence(5));
+            // Assert (Check thte output from your method)
             Assert.AreEqual(expectedResult, actualResult);
         }
 
