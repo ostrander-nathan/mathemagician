@@ -29,6 +29,16 @@ namespace MathMagician
                     userNumber = new EvenNumber();
                     break;
 
+                case "oddnumber":
+                    userNumber = new OddNumber();
+                    break;
+                case "fibonaccinumber":
+                    userNumber = new FibonacciNumber();
+                    break;
+                case "primenumber":
+                    userNumber = new PrimeNumber();
+                    break;
+
                 default:
                     Console.WriteLine("Whoops! Wrong Command");
                     break;

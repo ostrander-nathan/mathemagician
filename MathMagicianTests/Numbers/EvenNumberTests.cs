@@ -11,7 +11,6 @@ namespace MathMagicianTests.Numbers
         public void EnsureICanCreateInstance()
         {
             EvenNumber evenNumber = new EvenNumber();
-
             Assert.IsNotNull(evenNumber);
         }
 
@@ -45,10 +44,23 @@ namespace MathMagicianTests.Numbers
             // Arrange
             EvenNumber evenNumber = new EvenNumber();
             // Act
-            int[] expectedResult = new int[] { 0, 2, 4, 6, 8 };
+            int[] expectedResult = new int[] { 2, 4, 6, 8, 10 };
             int[] actualResult = evenNumber.GetSequence(5);
             // Assert (Check thte output from your method)
             CollectionAssert.AreEqual(expectedResult, actualResult);
+        }
+
+        [TestMethod]
+        public void EnsureICanPrintSequence()
+        {
+            // Arrange
+            EvenNumber EvenNumber = new EvenNumber();
+            // Act
+            string expectedResult = "2 4 6 8 10";
+            int[] inputArray = new[] { 2, 4, 6, 8, 10 };
+            string actualResult = EvenNumber.PrintNumbers(inputArray);
+            // Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
     }
 }
