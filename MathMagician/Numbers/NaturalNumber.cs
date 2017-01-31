@@ -13,20 +13,22 @@ namespace MathMagician.Numbers
 
         public NaturalNumber()
         {
-            First = 1;
+            // Both lines 17 & 18 the same Sugar Example
+            First++;
+            //First = 1;
             Step = 1;
             // this.First = 1;
         }
-        
-        public virtual int GetFirst()
-        {
-            return First;
-        }
-    
-        public virtual int GetNext(int current)
-        {
-            return current + Step;
-        }
+
+        public virtual int GetFirst() => First;
+        //{ EXAMPLE OF SYNTACTIC SUGAR
+        //    return First;
+        //}
+
+        public virtual int GetNext(int current) => current + Step;
+        //{ ANOTHER SYNTACTIC SUGAR EXAMPLE
+        //    return current + Step;
+        //}
 
         public virtual int[] GetSequence(int how_many)
         {

@@ -12,7 +12,7 @@ namespace MathMagician
         static void Main(string[] args)
         {
             // Think about how will the user pick a command? Pick Command from question then pick number
-            Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber, PrimeNumber");
+            Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber");
             // Is it better to modify the orginal question? Make it more useful? modified question
             string command = Console.ReadLine();
 
@@ -35,9 +35,9 @@ namespace MathMagician
                 case "fibonaccinumber":
                     userNumber = new FibonacciNumber();
                     break;
-                case "primenumber":
-                    userNumber = new PrimeNumber();
-                    break;
+                //case "primenumber":
+                //    userNumber = new PrimeNumber();
+                //    break;
 
                 default:
                     Console.WriteLine("Whoops! Wrong Command");
