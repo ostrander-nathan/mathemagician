@@ -14,6 +14,7 @@ namespace MathMagicianTests.Numbers
 
             Assert.IsNotNull(primeNumber);
         }
+
         [TestMethod]
         public void TestIfNumberIsPrime()
         {

@@ -8,7 +8,7 @@ namespace MathMagician.Numbers
 {
     public class FibonacciNumber : NaturalNumber
     {
-        private int[] BaseSequence { get; set; }
+        //private int[] BaseSequence { get; set; }
         
         public int GetNextFib(int currentNumber, int previousNumber)
         {
