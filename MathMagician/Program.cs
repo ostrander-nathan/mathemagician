@@ -12,12 +12,15 @@ namespace MathMagician
         static void Main(string[] args)
         {
             //bool hasCommand = true;
-            //do {
-            // Think about how will the user pick a command? Pick Command from question then pick number
-            Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber");
-            // Is it better to modify the orginal question? Make it more useful? modified question
-            string command = Console.ReadLine();
-            // When should you actually create an instance of your number class? now or later? 
+            string command = "";
+            do
+            {
+                // Think about how will the user pick a command? Pick Command from question then pick number
+                Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber");
+                // Is it better to modify the orginal question? Make it more useful? modified question
+                command = Console.ReadLine();
+                // When should you actually create an instance of your number class? now or later? 
+            } while (command.ToLower() != "naturalnumber" && command.ToLower() != "evennumber" && command.ToLower() != "oddnumber" && command.ToLower() != "fibonaccinumber");
             NaturalNumber userNumber = new NaturalNumber();
                 // Once I have the command(whatever it look like) how should i check if its a valid command
                 switch (command.ToLower())
@@ -49,13 +52,13 @@ namespace MathMagician
                         break;
                         // Need Command to go back to start 
                 }
-            //}
-            //while (!hasCommand);
-          
-            Console.WriteLine("How many should I print 1-30?");
-            string how_many = Console.ReadLine();
-            int number = Int32.Parse(how_many);// set string input(how_many) to int number
-            
+            int number = 0;
+            do
+            {
+                Console.WriteLine("How many should I print 1-30?");
+                string how_many = Console.ReadLine();
+                number = Int32.Parse(how_many);// set string input(how_many) to int number
+            } while (!(number <= 30 && number >= 1));
             if (number <= 30 && number >= 1)// if statement to determine if number is in between the 1-30
             {
                 Console.WriteLine($"Cool, I'm going to print {number} {command} numbers.");

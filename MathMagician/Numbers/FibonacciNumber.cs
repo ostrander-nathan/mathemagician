@@ -29,7 +29,7 @@ namespace MathMagician.Numbers
 
         private int getFibonacciAtPlace(int place)
         {
-            if(place <= 1)
+            if (place <= 1)
             {
                 return place;
             }
@@ -38,11 +38,11 @@ namespace MathMagician.Numbers
 
         public override int[] GetSequence(int how_many)
         {
-            int[] fibonacciNumber = new int[how_many]; // sets int[how_many] to fibonacciNumber
-            fibonacciNumber[0] = GetFirst();// sets first position to 0 
+            var fibonacciNumber = new int[how_many]; // sets int[how_many] to fibonacciNumber
+            fibonacciNumber[0] = GetFirst();// sets first [0] position to 1
 
             if (how_many >= 2)
-            {
+           {
                 fibonacciNumber[1] = 1;// sets second array position to 1
             }
 
