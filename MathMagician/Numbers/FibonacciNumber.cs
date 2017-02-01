@@ -15,6 +15,27 @@ namespace MathMagician.Numbers
             return currentNumber + previousNumber;
         }
 
+        public override int GetNext(int current)
+        {
+            int counter = 1;
+            int next = 1;
+            while (next < counter)
+            {
+                counter++;
+                next = getFibonacciAtPlace(counter);
+            }
+            return next;
+        }
+
+        private int getFibonacciAtPlace(int place)
+        {
+            if(place <= 1)
+            {
+                return place;
+            }
+            return getFibonacciAtPlace(place - 1) + getFibonacciAtPlace(place - 2);
+        }
+
         public override int[] GetSequence(int how_many)
         {
             int[] fibonacciNumber = new int[how_many]; // sets int[how_many] to fibonacciNumber

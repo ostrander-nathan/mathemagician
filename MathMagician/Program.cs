@@ -11,38 +11,47 @@ namespace MathMagician
     {
         static void Main(string[] args)
         {
+            //bool hasCommand = true;
+            //do {
             // Think about how will the user pick a command? Pick Command from question then pick number
             Console.WriteLine("Type in a Command from the following options: NaturalNumber, EvenNumber, OddNumber, FibonacciNumber");
             // Is it better to modify the orginal question? Make it more useful? modified question
             string command = Console.ReadLine();
             // When should you actually create an instance of your number class? now or later? 
             NaturalNumber userNumber = new NaturalNumber();
-            // Once I have the command(whatever it look like) how should i check if its a valid command
-            switch (command.ToLower())
-            {
-                case "naturalnumber":
-                    userNumber = new NaturalNumber();
-                    break;
+                // Once I have the command(whatever it look like) how should i check if its a valid command
+                switch (command.ToLower())
+                {
+                    case "naturalnumber":
+                        userNumber = new NaturalNumber();
+                        //hasCommand = true;
+                        break;
 
-                case "evennumber":
-                    userNumber = new EvenNumber();
-                    break;
+                    case "evennumber":
+                        userNumber = new EvenNumber();
+                        //hasCommand = true;
+                        break;
 
-                case "oddnumber":
-                    userNumber = new OddNumber();
-                    break;
-                case "fibonaccinumber":
-                    userNumber = new FibonacciNumber();
-                    break;
-                //case "primenumber":
-                //    userNumber = new PrimeNumber();
-                //    break;
+                    case "oddnumber":
+                        userNumber = new OddNumber();
+                        //hasCommand = true;
+                        break;
+                    case "fibonaccinumber":
+                        userNumber = new FibonacciNumber();
+                        //hasCommand = true;
+                        break;
+                    //case "primenumber":
+                    //    userNumber = new PrimeNumber();
+                    //    break;
 
-                default:
-                    Console.WriteLine("Whoops! Wrong Command");
-                    break;
-                    // Need Command to go back to start 
-            }
+                    default:
+                        Console.WriteLine("Whoops! Wrong Command");
+                        break;
+                        // Need Command to go back to start 
+                }
+            //}
+            //while (!hasCommand);
+          
             Console.WriteLine("How many should I print 1-30?");
             string how_many = Console.ReadLine();
             int number = Int32.Parse(how_many);// set string input(how_many) to int number
